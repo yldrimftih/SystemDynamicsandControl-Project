@@ -1,14 +1,23 @@
-%Effect of zeta, the damping ratio 
+%Effect of zeta, the damping ratio
 zeta = 0.335;
 wn = 4.474;
-wd = wn*sqrt(1-zeta^2);
 b0 = 2;
 a2 = 1;
-a1 = 2*wn*zeta;
+a1 = 2*zeta*wn;
 a0 = wn^2;
-t = 1/(wn*zeta);
-ts = 4*t;
+T  = 1/(wn*zeta);
+ts = 4*T;
+wd = wn*sqrt(1-zeta^2);
+t = 0:0.001:3;
 N = [0 0 b0];
 D = [a2 a1 a0];
-impulse(N,D); 
-grid
+[y1,t1] = step(N,D,t);
+%[y2,t2] = impulse(N,D,t);
+%subplot(211)
+plot(t,y1);
+grid;
+title('Step Response')
+%subplot(212)
+%plot(t,y2);
+%grid;
+%title('Impulse Response')

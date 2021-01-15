@@ -1,5 +1,5 @@
-La : 0.820 H
-Ra : 2.581 Ohm
-Km : 0.516
-Jm : 0.0221
-fm : 0.00054
+La : 0.820   (H)      [Armature Inductance]
+Ra : 2.581   (Ohm)    [Armature Resistance]
+Km : 0.516   (N.m/A)  [Motor torque constant]
+Jm : 0.0221  (kg.m^2) [Mechanical Inertia]
+fm : 0.00054 (N.m.s)  [Friction coefficient]
